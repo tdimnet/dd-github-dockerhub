@@ -18,3 +18,8 @@ In addition to these technical prerequisites, you will also need:
 - Open VsCode and launch the Docker container with the DevContainer extaension.
 - Install the Datadog agent on your container `bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"`
 
+
+## Troubleshooting
+
+- `service datadog-agent status`: it will give you the status of the datadog agent and allows you to see if everything is working as expected
+- `tail -f /var/log/datadog/agent.log`: it will prompt you some nice informations about the agent and will help you debug your code.
