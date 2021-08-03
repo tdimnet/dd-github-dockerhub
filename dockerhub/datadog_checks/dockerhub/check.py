@@ -13,8 +13,8 @@ class DockerhubCheck(AgentCheck):
         r = requests.post(
             "https://hub.docker.com/v2/users/login",
             data={
-                "username": "tdimnet",
-                "password": "kMzl2jjpxsd1j4HJ0Fn4"
+                "username": USERNAME,
+                "password": PASSWORD
             }
         )
 
