@@ -23,3 +23,7 @@ def test_config():
             'repository': 'front-dd'
         })
 
+    c.check({
+        'namespace': 'tdimnet',
+        'repository': 'front-dd'
+    })

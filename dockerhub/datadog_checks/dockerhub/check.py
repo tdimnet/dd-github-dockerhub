@@ -13,8 +13,8 @@ class DockerhubCheck(AgentCheck):
         r = requests.post(
             "https://hub.docker.com/v2/users/login",
             data={
-                "username": USERNAME,
-                "password": PASSWORD
+                "username": "tdimnet",
+                "password": "kMzl2jjpxsd1j4HJ0Fn4"
             }
         )
 
@@ -48,6 +48,5 @@ class DockerhubCheck(AgentCheck):
         statistics = self.get_repository_image_statistics(namespace, repository)
 
         self.gauge('dockerhub.totalInstances', statistics['total'], self.OK)
-        # self.gauge('dockerhub.activeInstances', statistics['active'])
-        # self.gauge('dockerhub.inactiveInstances', statistics['inactive'])
-
+        self.gauge('dockerhub.activeInstances', statistics['active'])
+        self.gauge('dockerhub.inactiveInstances', statistics['inactive'])
