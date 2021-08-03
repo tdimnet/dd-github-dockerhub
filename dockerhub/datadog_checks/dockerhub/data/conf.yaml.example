@@ -1,0 +1,29 @@
+## All options defined here are available to all instances.
+#
+init_config:
+
+    ## @param service - string - optional
+    ## Attach the tag `service:<SERVICE>` to every metric, event, and service check emitted by this integration.
+    ##
+    ## Additionally, this sets the default `service` for every log source.
+    #
+    # service: <SERVICE>
+
+## Every instance is scheduled independent of the others.
+#
+instances:
+
+    ## @param url - string - required
+    ## the URL to check
+    #
+  - url: http://example.org
+
+    ## @param search_string - string - required
+    ## the string to search for
+    #
+    search_string: Example Domain
+
+    ## @param flag_follow_redirects - boolean - optional - default: false
+    ## Follow 301 redirects
+    #
+    # flag_follow_redirects: false

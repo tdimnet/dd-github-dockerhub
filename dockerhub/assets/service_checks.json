@@ -1,0 +1,11 @@
+[
+    {
+        "agent_version": "7.29.1",
+        "integration": "dockerhub",
+        "check": "dockerhub.search",
+        "statuses": ["ok", "warning", "critical"],
+        "groups": [],
+        "name": "Recherche Dockerhub",
+        "descrption": "Here goes the description"
+    }
+]
