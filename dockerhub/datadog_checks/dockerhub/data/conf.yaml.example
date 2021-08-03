@@ -13,17 +13,12 @@ init_config:
 #
 instances:
 
-    ## @param url - string - required
-    ## the URL to check
+    ## @param namespace - string - required
+    ## the dockerhub user or organisation name
     #
-  - url: http://example.org
+  - namespace: tdimnet
 
-    ## @param search_string - string - required
-    ## the string to search for
+    ## @param repository - string - required
+    ## the docker repository
     #
-    search_string: Example Domain
-
-    ## @param flag_follow_redirects - boolean - optional - default: false
-    ## Follow 301 redirects
-    #
-    # flag_follow_redirects: false
+    repository: front-dd

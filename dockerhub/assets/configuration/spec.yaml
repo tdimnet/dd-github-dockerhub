@@ -7,21 +7,15 @@ files:
         - template: init_config/default
     - template: instances
       options:
-        - name: url
+        - name: namespace
           required: true
-          description: the URL to check
+          description: the dockerhub user or organisation name
           value:
             type: string
-            example: http://example.org
-        - name: search_string
+            example: tdimnet
+        - name: repository
           required: true
-          description: the string to search for
+          description: the docker repository
           value:
             type: string
-            example: Example Domain
-        - name: flag_follow_redirects
-          required: false
-          description: Follow 301 redirects
-          value:
-            type: boolean
-            example: false
+            example: front-dd

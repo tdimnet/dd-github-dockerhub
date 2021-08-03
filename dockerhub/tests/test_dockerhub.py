@@ -15,15 +15,11 @@ def test_config():
     
     with pytest.raises(ConfigurationError):
         c.check({
-            'url': 'http://foobar'
+            'namespace': 'tdimnet'
         })
     
     with pytest.raises(ConfigurationError):
         c.check({
-            'search_string': 'foo'
+            'repository': 'front-dd'
         })
-    
-    c.check({
-        'url': 'http://foobar',
-        'search_string': 'foo'
-    })
+
