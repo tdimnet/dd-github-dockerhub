@@ -1,0 +1,19 @@
+init_config:
+  access_token: yourGithubAccessToken
+
+instances:
+  - min_collection_interval: 30
+  - columns: [
+    {
+      "name": "todo",
+      "id": "15409573"
+    },
+    {
+      "name": "in progress",
+      "id": "15409574"
+    },
+    {
+      "name": "done",
+      "id": "15409575"
+    }
+  ]
