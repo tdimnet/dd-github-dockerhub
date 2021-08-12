@@ -5,13 +5,19 @@ from datadog_checks.base import AgentCheck
 
 class GithubRepoCheck(AgentCheck):
     def get_pull_requests_list(self, access_token, username, repository):
-        r = requests.get(f'https://api.github.com/repos/{username}/{repository}/pulls?access_token={access_token}')
+        r = requests.get(
+            f'https://api.github.com/repos/{username}/{repository}/pulls',
+            headers={'Authorization': f'token {access_token}'}
+        )
 
         if r.status_code == 200:
             return len(r.json())
 
     def get_issues_list(self, access_token, username, repository):
-        r = requests.get(f'https://api.github.com/repos/{username}/{repository}/issues?access_token={access_token}')
+        r = requests.get(
+            f'https://api.github.com/repos/{username}/{repository}/issues',
+            headers={'Authorization': f'token {access_token}'}
+        )
 
         if r.status_code == 200:
             return len(r.json())

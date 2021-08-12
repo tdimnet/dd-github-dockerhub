@@ -6,8 +6,11 @@ from datadog_checks.base import AgentCheck
 class GithubProjectsCheck(AgentCheck):
     def get_projects_cards(self, column_id, access_token):
         r = requests.get(
-            f'https://api.github.com/projects/columns/{column_id}/cards?access_token={access_token}',
-            headers={"Accept": "application/vnd.github.inertia-preview+json"}
+            f'https://api.github.com/projects/columns/{column_id}/cards',
+            headers={
+                "Accept": "application/vnd.github.inertia-preview+json",
+                'Authorization': f'token {access_token}'
+            }
         )
 
         if r.status_code == 200:

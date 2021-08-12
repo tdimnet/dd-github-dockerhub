@@ -1,7 +1,7 @@
 init_config:
-  access_token: yourGithubAccessToken
-  username: yourUsername
-  repository: yourRepository
+  access_token: "yourGithubTokenHere"
+  username: "tdimnet"
+  repository: "front-dd"
 
 instances:
   - min_collection_interval: 30

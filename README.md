@@ -29,10 +29,10 @@ You can find more information about custom agent checks on this [Google Sheet pr
 
 ## 4. How it works
 
-Once the Datadog agent has been installed, you can copy the custom agent checks into the `/etc/datadog` directory:
+Once the Datadog agent has been installed, you can copy the custom agent checks into the `/etc/datadog-agent` directory:
 
-- `cp -R custom_agent_checks/*/*.py /etc/datadog/check.d/`
-- `cp -R custom_agent_checks/*/*.yaml /etc/datadog/conf.d`
+- `cp -R custom_agent_checks/*/*.py /etc/datadog-agent/checks.d/`
+- `cp -R custom_agent_checks/*/*.yaml /etc/datadog-agent/conf.d/`
 
 Then you just have to restart the Datadog agent `service datadog-agent restart`.
 
